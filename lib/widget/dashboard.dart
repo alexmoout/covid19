@@ -23,6 +23,7 @@ class DashBoardMain extends StatelessWidget {
           valueColor: Color(0xFFffb259),
           value: dataDetail.totalCase,
           textColor: Colors.black,
+          backgroundColor: Color(0xFF8fb9a8),
         ),
         ItemContainer(
           label: 'Total deaths',

@@ -1,24 +1,25 @@
 import 'package:countup/countup.dart';
 import 'package:flutter/material.dart';
+import 'package:flutteriu_covid19/widget/constant.dart';
 
 class ItemContainer extends StatelessWidget {
   final String label;
   final int value;
-
   final Color textColor;
   final Color valueColor;
+  final Color backgroundColor;
 
   ItemContainer({
     this.label,
     this.textColor,
     this.valueColor,
     this.value,
+    this.backgroundColor,
   });
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color(0xFFf2f6fd),
-      elevation: 14.0,
+      color: kColorContainerItem,
       shadowColor: valueColor,
       borderRadius: BorderRadius.circular(10),
       child: Padding(
@@ -30,7 +31,7 @@ class ItemContainer extends StatelessWidget {
             Text(
               label,
               style: TextStyle(
-                color: textColor,
+                color: kColorTextItem,
                 fontWeight: FontWeight.w500,
                 fontSize: 18,
               ),

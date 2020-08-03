@@ -7,7 +7,7 @@ class Helper {
   }
 
   static timestampFormatLong(int timestamp,
-      {String format = 'HH:mm, MM/dd/yyyy'}) {
+      {String format = 'HH:mm, dd/MM/yyyy'}) {
     var date = new DateTime.fromMillisecondsSinceEpoch(timestamp);
     return DateFormat(format).format(date);
   }

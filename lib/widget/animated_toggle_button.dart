@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutteriu_covid19/widget/constant.dart';
 
 class AnimatedToggle extends StatefulWidget {
   final List<String> values;
@@ -12,11 +13,11 @@ class AnimatedToggle extends StatefulWidget {
     @required this.values,
     @required this.onToggleCallback,
     this.backgroundColor = const Color(0xFFfefeff),
-    this.buttonColor = const Color(0xFFf2f6fd),
-    this.textColor = const Color(0xFF494a4c),
+    this.buttonColor = const Color(0xFF232531),
+    this.textColor = kColorText,
     this.shadows = const [
       BoxShadow(
-        color: const Color(0xFFdadde4),
+        color: kColorButton,
         spreadRadius: 5,
         blurRadius: 10,
         offset: Offset(0, 5),
@@ -82,7 +83,7 @@ class _AnimatedToggleState extends State<AnimatedToggle> {
             alignment:
                 initialPosition ? Alignment.centerLeft : Alignment.centerRight,
             child: Container(
-              width: width * 0.35,
+              width: width * 0.33,
               height: width * 0.13,
               decoration: ShapeDecoration(
                 color: widget.buttonColor,

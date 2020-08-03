@@ -17,7 +17,7 @@ class _ItemTypeChartState extends State<ItemTypeChart> {
       child: Container(
         height: 20,
         child: Material(
-          color: Color(0xFFf2f6fd),
+          color: Color(0xFF232531),
           shadowColor: widget.active ? widget.color : Colors.grey,
           borderRadius: BorderRadius.circular(
             10,
@@ -32,7 +32,7 @@ class _ItemTypeChartState extends State<ItemTypeChart> {
                 ),
                 Container(
                   width: 40,
-                  height: 5,
+                  height: 3,
                   color: widget.active ? widget.color : Colors.grey,
                 ),
                 SizedBox(
@@ -42,6 +42,7 @@ class _ItemTypeChartState extends State<ItemTypeChart> {
                   widget.name,
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
+                    color: Color(0xFFd4d4d7),
                   ),
                 ),
                 SizedBox(

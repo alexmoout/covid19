@@ -70,21 +70,28 @@ class _HomeScreenState extends State<HomeScreen>
 
         for (var item in data['cases'].entries) {
           var time = Helper.convertTimeStamp('${item.key}');
+          int value = item.value;
+          var setValue = value != null ? value : 0;
           listDataCases.add(DateLineChartModel(
               timeStamp: DateTime.fromMicrosecondsSinceEpoch(time),
-              value: item.value));
+              value: setValue));
         }
         for (var item in data['deaths'].entries) {
           var time = Helper.convertTimeStamp('${item.key}');
+          int value = item.value;
+          var setValue = value != null ? value : 0;
+
           listDataDeaths.add(DateLineChartModel(
               timeStamp: DateTime.fromMicrosecondsSinceEpoch(time),
-              value: item.value));
+              value: setValue));
         }
         for (var item in data['recovered'].entries) {
           var time = Helper.convertTimeStamp('${item.key}');
+          int value = item.value;
+          var setValue = value != null ? value : 0;
           listRecovered.add(DateLineChartModel(
               timeStamp: DateTime.fromMicrosecondsSinceEpoch(time),
-              value: item.value));
+              value: setValue));
         }
         for (var item in data['cases'].entries) {
           String text = item.key;
@@ -202,15 +209,16 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFf2f6fd),
+      backgroundColor: Color(0xFF272936),
       appBar: AppBar(
-        brightness: Brightness.light,
-        backgroundColor: Color(0xFFf3f7fd),
+        elevation: 0,
+        brightness: Brightness.dark,
+        backgroundColor: Color(0xFF272936),
         title: Text(
           'COVID-19 statistics in the world',
           style: TextStyle(
               color: Color(
-            0xFF303133,
+            0xFFbebfc3,
           )),
         ),
       ),
