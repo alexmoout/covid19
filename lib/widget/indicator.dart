@@ -15,7 +15,7 @@ class Indicator extends StatelessWidget {
         child: CircularProgressIndicator(
           valueColor: new AlwaysStoppedAnimation<Color>(this.color ??
               Color(
-                0xFF303133,
+                0xFFffffff,
               )),
         ),
       ),

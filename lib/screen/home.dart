@@ -9,7 +9,7 @@ import 'package:flutteriu_covid19/widget/animated_toggle_button.dart';
 import 'package:flutteriu_covid19/widget/custom_chart.dart';
 import 'package:flutteriu_covid19/widget/dashboard.dart';
 import 'package:flutteriu_covid19/widget/dashboard_today.dart';
-import 'package:flutteriu_covid19/widget/indicator.dart';
+import 'package:flutteriu_covid19/widget/indicator.dart' as _;
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -229,10 +229,10 @@ class _HomeScreenState extends State<HomeScreen>
         onRefresh: _onRefresh,
         onLoading: _onLoading,
         header: WaterDropMaterialHeader(
-          backgroundColor: Color(0xFFf2f6fd),
-          color: Colors.black,
+          backgroundColor: Color(0xFF272936),
+          color: Color(0xFFffffff),
         ),
-        child: _isLoading ? Indicator() : _buildBody(),
+        child: _isLoading ? _.Indicator() : _buildBody(),
       ),
     );
   }
